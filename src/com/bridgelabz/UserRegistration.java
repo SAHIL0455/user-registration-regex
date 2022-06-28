@@ -7,6 +7,7 @@ public class UserRegistration {
         regex.firstName();
         regex.lastName();
         regex.emailID();
+        regex.phoneNumber();
         System.out.println(regex.toString());
     }
 }
