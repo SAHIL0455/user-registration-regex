@@ -5,6 +5,7 @@ public class UserRegistration {
         System.out.println("Welcome to User Registration");
         Regex regex = new Regex();
         regex.firstName();
-        regex.toString();
+        regex.lastName();
+        System.out.println(regex.toString());
     }
 }
