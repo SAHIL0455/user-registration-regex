@@ -62,7 +62,7 @@ public class Regex<T> {
     public void password() {
         System.out.println("Enter the Password");
         T password = (T) scanner.next();
-        boolean result = Pattern.matches("(?=.*?[A-Z])(?=.*?[0-9])([a-zA-Z\\d@*#$&,.]{8,})", (CharSequence) password);
+        boolean result = Pattern.matches("(?=.*?[A-Z])(?=.*?[!@#$^&*.])(?=.*?[0-9])([a-zA-Z\\d@*#$&,.]{8,})", (CharSequence) password);
         if (result) {
             Password = password;
         } else {
