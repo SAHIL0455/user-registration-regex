@@ -9,6 +9,7 @@ public class Regex<T> {
     private T LastName;
     private T EmailID;
     private T PhoneNumber;
+    private T Password;
 
     public void firstName() {
         System.out.println("Enter the First Name");
@@ -57,6 +58,17 @@ public class Regex<T> {
             phoneNumber();
         }
     }
+    public void password(){
+        System.out.println("Enter the Password");
+        T password = (T)scanner.next();
+        boolean result = Pattern.matches("[a-zA-z\\d]{8,}", (CharSequence) password);
+        if (result){
+            Password = password;
+        }else {
+            System.out.println("Invalid Password Please try again");
+            password();
+        }
+    }
 
     @Override
     public String toString() {
@@ -65,6 +77,7 @@ public class Regex<T> {
                 ", Last Name = " + LastName +
                 ", Email ID = " + EmailID +
                 ", Phone Number = " + PhoneNumber +
+                ", Password = " +Password+
                 '}';
     }
 
