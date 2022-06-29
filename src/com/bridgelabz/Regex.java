@@ -58,13 +58,14 @@ public class Regex<T> {
             phoneNumber();
         }
     }
-    public void password(){
+
+    public void password() {
         System.out.println("Enter the Password");
-        T password = (T)scanner.next();
-        boolean result = Pattern.matches("[a-zA-z\\d]{8,}", (CharSequence) password);
-        if (result){
+        T password = (T) scanner.next();
+        boolean result = Pattern.matches("([(A-Z)+])([a-zA-Z\\d@*#$&,.]{8,})", (CharSequence) password);
+        if (result) {
             Password = password;
-        }else {
+        } else {
             System.out.println("Invalid Password Please try again");
             password();
         }
@@ -77,7 +78,7 @@ public class Regex<T> {
                 ", Last Name = " + LastName +
                 ", Email ID = " + EmailID +
                 ", Phone Number = " + PhoneNumber +
-                ", Password = " +Password+
+                ", Password = " + Password +
                 '}';
     }
 
